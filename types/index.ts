@@ -25,6 +25,11 @@ export interface CustomButtonProps {
   isDisabled?: boolean;
 }
 
+export interface CustomFilterProps {
+  title: string;
+  options: OptionProps[];
+}
+
 export interface FilterProps {
   manufacturer: string;
   year: number;
@@ -33,7 +38,17 @@ export interface FilterProps {
   model: string;
 }
 
+export interface OptionProps {
+  title: string;
+  value: string;
+}
+
 export interface SearchManufacturerProps {
   manufacturer: string;
   setManufacturer: (manufacturer: string) => void;
+}
+
+export interface ShowMoreProps {
+  pageNumber: number;
+  isNext: boolean;
 }
